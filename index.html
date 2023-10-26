@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do-APP</title>
+    <style>
+      .main {
+        display: flex;
+        margin-top: -10px;
+        margin-left: -10px;
+      }
+      .first {
+        width: 50%;
+        height: 100vh;
+        background-color: rgb(147, 147, 218);
+      }
+      .second {
+        width: 50%;
+        height: 100vh;
+        background-color: rgb(81, 81, 128);
+      }
+      .t {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.75cm;
+        margin-top: 7px;
+        font-weight: 300;
+      }
+      .dt {
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 0px 1px;
+        height: 50px;
+        width: 300px;
+        margin-top: 20px;
+        margin-left: 160px;
+        background-color: purple;
+        text-align: center;
+      }
+      .mini_div {
+        height: 300px;
+        width: 300px;
+        background-color: yellow;
+        margin-top: 40px;
+        margin-left: 150px;
+      }
+
+      .form {
+        height: 300px;
+        background-color: rgb(197, 204, 255);
+        width: 250px;
+        margin-top: 45px;
+        margin-left: 175px;
+        border: 2px solid black;
+        border-radius: 10px;
+      }
+      .h3 {
+        color: rgb(0, 0, 0);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 0.6cm;
+        font-weight: 400;
+        padding-top: 20px;
+        padding-left: 70px;
+      }
+      .l {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.45cm;
+        color: rgb(59, 54, 54);
+        margin-left: 10px;
+        margin-top: 20px;
+      }
+      #i1 {
+        margin-top: 20px;
+        margin-bottom: 30px;
+      }
+      #i2 {
+        margin-bottom: 30px;
+      }
+      input {
+        width: 120px;
+        border:1px solid black;
+         border-radius:5px;
+      }
+      .btn {
+        font-size: 0.45cm;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: rgb(70, 70, 108);
+        color: white;
+        border: 2px solid black;
+        border-radius: 3px;
+        padding: 3px 5px;
+        margin-left: 95px;
+      }
+      .btn:hover {
+        background-color: rgb(113, 110, 132);
+      }
+      .output{
+        height:399px;
+        width:400px;
+        background-color:pink;
+        margin-left:120px;
+        margin-top:50px;
+        min-height: 70px;
+        border:2px solid black;
+        border-radius:10px;
+      }
+      .header{
+        color: rgb(0, 0, 0);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 0.6cm;
+        font-weight: 400;
+        padding-top: 5px;
+        margin-left: 170px;
+        margin-top:10px;
+      }
+    </style>
+  </head>
+ <!-- <script>
+    let i = 0;
+    function addit(){
+
+      event.preventDefault();
+
+      var t = document.getElementById('i1').value
+      var d = document.getElementById('i2').value
+
+      var box = document.getElementById('output')
+
+      var child = document.createElement('div')
+      child.id = i;
+      i++;
+
+      var g1 = document.createElement('span')
+      g1.id = 'g1'
+      g1.textContent = t
+     
+      var g2 = document.createElement('span')
+      g2.id = 'g2'
+      g2.textContent = d;
+     
+      var g3 = document.createElement('button')
+      g3.id = 'g3'
+      g3.textContent = "Delete";
+      g3.setAttribute('onclick', ()=>{
+            box.removeChild(child)
+      })
+
+      child.appendChild(g1)
+      child.appendChild(g2)
+      child.appendChild(g3)
+
+      console.log("Printed")
+      box.appendChild(child)
+    }
+
+    function addit(){
+
+    }
+  </script> -->
+  <body>
+    <div class="main">
+      <!-- First half -->
+      <div class="first">
+        <div class="dt1 dt"><h3 class="title_1 t">Schedule Task here</h3></div>
+        <div class="form">
+          <h3 class="h3">Add Task</h3>
+          <form method="post">
+            <label for="i1" class="l1 l" >Task Title : </label>
+            <input type="text" name="title" id="i1" />
+            <label for="i2" class="l2 l">Task Desc : </label>
+            <input type="text" name="desc" id="i2" />
+            <button class="btn" type="submit">ADD</button>
+          </form>
+        </div>
+      </div>
+      <!-- Second half -->
+      <div class="second">
+        <div class="dt2 dt"><h3 class="title_2 t">Scheduled Tasks</h3></div>
+        <div class="output" id="output">
+          <h3 class="header">Tasks</h3>
+        </div>
+      </div>
+    
+  </body>
+</html>

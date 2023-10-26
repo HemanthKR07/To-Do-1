@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: rgb(91, 91, 143);
+        box-sizing: border-box;
+        text-align: center;
+        margin: auto;
+      }
+      .body {
+        height: 100vh;
+        width: 100%;
+        margin: auto;
+      }
+      .t {
+        height: 75px;
+        width: 400px;
+        border: 3px solid black;
+        border-radius: 20px;
+        background-color: orange;
+        margin-top: 50px;
+        margin-left: 450px;
+      }
+      .h2_t {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 300;
+        font-size: 0.75cm;
+      }
+      .opr {
+        height: 330px;
+        width: 300px;
+        margin-top: 20px;
+        margin-left: 505px;
+        background-color: purple;
+        border: 3px solid black;
+        border-radius: 20px;
+      }
+      .ts {
+        color: rgb(227, 184, 184);
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-weight: 300;
+        font-size: 0.79cm;
+        padding-top: 35px;
+        padding-top: 6px;
+      }
+      .b {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 0.4cm;
+        border: 2px solid black;
+        border-radius: 6px;
+        padding: 5px 9px;
+        margin-top: 20px;
+      }
+      .b:hover {
+        background-color: rgb(164, 160, 160);
+        color: white;
+      }
+    </style>
+  </head>
+  <script>
+    function adder() {
+      const a = document.getElementById("b1");
+      a.addEventListener("click", function () {
+        window.location.href = "http://localhost:2605/add";
+      });
+    }
+    function delet() {
+      const a = document.getElementById("b2");
+      a.addEventListener("click", function () {
+        window.location.href = "http://localhost:2605/delet";
+      });
+    }
+    function view() {
+      const a = document.getElementById("b3");
+      a.addEventListener("click", function () {
+        window.location.href = "http://localhost:2605/view";
+      });
+    }
+  </script>
+  <body>
+    <div class="body">
+      <div class="t"><h2 class="h2_t">TO-DO APP</h2></div>
+      <div class="opr">
+        <h3 class="ts">OPERATIONS</h3>
+        <button class="b1 b" id="b1" onclick="adder()">Add Task</button><br />
+        <button class="b2 b" id="b2" onclick="delet()">Delete Task</button
+        ><br />
+        <button class="b3 b" id="b3" onclick="view()">View Task</button>
+      </div>
+    </div>
+  </body>
+</html>
